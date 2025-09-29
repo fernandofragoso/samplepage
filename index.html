@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Teste Page</title>
+  </head>
+  <body>
+    <h1>Test Page</h1>
+    <button onclick="sendEvent('close')">Close</button>
+    <button onclick="sendEvent('logout')">Logout</button>
+
+    <script>
+      function sendEvent(eventName) {
+        console.log('evento disparado:', eventName);
+        window.dispatchEvent(new CustomEvent(eventName));
+      }
+    </script>
+  </body>
+</html>
