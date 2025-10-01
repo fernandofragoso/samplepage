@@ -12,7 +12,7 @@
     <script>
       function sendEvent(eventName) {
         console.log('evento disparado:', eventName);
-        window.dispatchEvent(new CustomEvent(eventName));
+        window.dispatchEvent(new CustomEvent('webview', { detail: eventName }));
       }
     </script>
   </body>
